@@ -1,6 +1,6 @@
 networks:
-    db-data-net:
-        driver: bridge
+  db-data-net:
+    driver: bridge
 services:
   mysql:
     image: my-sql:1.2
@@ -28,11 +28,11 @@ services:
     ports:
       - "8080:8080"
     environment:
-     - APP_ENV=Development
+      - APP_ENV=Development
     networks:
       - db-data-net
     depends_on:
       - mysql
     restart: unless-stopped
 volumes:
-    db-data:
+  db-data:
